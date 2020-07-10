@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainAnchor" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.controller.BlankChat">
+    <children>
+        <VBox prefHeight="530.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" spacing="10.0">
+                    <children>
+                        <JFXButton fx:id="backBtn" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#btnClicked" prefHeight="30.0" prefWidth="30.0" styleClass="backBtn" stylesheets="@../../CSSFiles/BackBtn.css">
+                            <graphic>
+                                <Text fill="#1da1f2" strokeType="OUTSIDE" strokeWidth="0.0" text="🠔" textAlignment="CENTER" wrappingWidth="37.93341064453125">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Text>
+                            </graphic></JFXButton>
+                        <Circle fill="LAWNGREEN" radius="5.0" stroke="LAWNGREEN" strokeType="INSIDE" />
+                        <Label fx:id="headingLabel" prefHeight="30.0" prefWidth="200.0" text="Server">
+                            <font>
+                                <Font name="Segoe UI Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <VBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="103.0">
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets left="-5.0" />
+                    </padding>
+                </HBox>
+                <JFXListView fx:id="chatTable" prefHeight="400.0" prefWidth="400.0" stylesheets="@../../CSSFiles/TextBubble.css" />
+                <HBox prefHeight="50.0" prefWidth="400.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="inputText" onKeyReleased="#actionKey" prefHeight="30.0" prefWidth="310.0" promptText="Start a new message" stylesheets="@../../CSSFiles/TextArea.css">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="14.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TextField>
+                        <JFXButton fx:id="sendBtn" buttonType="RAISED" onAction="#btnClicked" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #1DA1F2; -fx-background-radius: 15;" text="SEND" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <padding>
+                        <Insets left="5.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children></VBox>
+    </children>
+</AnchorPane>

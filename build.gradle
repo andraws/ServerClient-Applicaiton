@@ -1,0 +1,51 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'com.diffplug.gradle.spotless' version '3.27.1'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+//sourceCompatibility = "11"
+//targetCompatibility = '11'
+mainClassName = 'Main'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'com.jfoenix:jfoenix:9.0.8'
+    testImplementation("junit:junit:4.13")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.6.2")
+}
+
+javafx {
+    version = "13"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+
+test {
+    useJUnitPlatform()
+//    testLogging {
+//        events "passed", "skipped", "failed"
+//    }
+}
+
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+compileJava.dependsOn 'spotlessApply'

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" prefHeight="50" prefWidth="400.0" spacing="10.0" style="-fx-background-color: #657786;" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label alignment="CENTER" prefHeight="50.0" prefWidth="40.0" text="🔔" textAlignment="CENTER" textFill="#1DA1F2">
+            <font>
+                <Font name="Segoe UI Semibold" size="30.0" />
+            </font>
+        </Label>
+        <Label fx:id="notificationLabel" prefHeight="31.0" prefWidth="346.0" text="Notification Text" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="Segoe UI Semibold" size="16.0" />
+            </font>
+        </Label>
+    </children>
+    <padding>
+        <Insets left="10.0" />
+    </padding>
+</HBox>

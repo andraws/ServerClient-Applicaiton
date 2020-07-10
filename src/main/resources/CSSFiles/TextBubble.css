@@ -1,0 +1,51 @@
+.sender {
+    -fx-background-color: #1DA1F2;
+    -fx-background-radius: 25 25 0 25;
+    -fx-text-fill: white;
+    -fx-font-family: Segoe UI Semibold;
+    -fx-font-size: 15px;
+}
+
+.receiver{
+    -fx-background-color: #E1E8ED;
+    -fx-background-radius: 25 25 25 0;
+    -fx-text-fill: black;
+    -fx-font-family: Segoe UI Semibold;
+    -fx-font-size: 15px;
+}
+
+.nameLabel{
+    -fx-pref-height: 17;
+    -fx-text-fill: Black;
+    -fx-font-size: 14px;
+    -fx-font-family: Segoe UI Semibold;
+    -fx-background-color: transparent;
+}
+
+.timeLabel{
+    -fx-pref-height: 17;
+    -fx-text-fill: #657786;
+    -fx-font-size: 12px;
+    -fx-font-family: Segoe UI;
+    -fx-background-color: transparent;
+}
+
+.list-view .scroll-bar:horizontal{
+    -fx-scale-y: 0px;
+}
+
+.list-view .cell{
+    -fx-background-color: white;
+}
+
+.hboxcss {
+    -fx-alignment: CENTER_LEFT;
+    -fx-max-height: 50;
+    -fx-pref-height: 50;
+    -fx-min-height: 50;
+    -fx-pref-width: 400;
+    -fx-max-width: 400;
+    -fx-min-width: 400;
+    -fx-spacing: 20.0;
+    -fx-background-color: #657786;
+}
